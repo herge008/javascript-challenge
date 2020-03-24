@@ -19,11 +19,11 @@ var input = document.getElementById("ufoFilterParams");
 
 function executeFilter(ufoRecord) {
   return (
-    (filterObjects["datetime"] == ufoRecord.datetime || filterObjects["datetime"] == "") &&
-    (filterObjects["city"] == ufoRecord.city || filterObjects["city"] == "") &&
-    (filterObjects["state"] == ufoRecord.state || filterObjects["state"] == "") &&
-    (filterObjects["country"] == ufoRecord.country || filterObjects["country"] == "") &&
-    (filterObjects["shape"] == ufoRecord.shape || filterObjects["shape"] == "")
+    (filterObjects["datetime"] == ufoRecord.datetime || filterObjects["datetime"] == "")
+    // (filterObjects["city"] == ufoRecord.city || filterObjects["city"] == "") &&
+    // (filterObjects["state"] == ufoRecord.state || filterObjects["state"] == "") &&
+    // (filterObjects["country"] == ufoRecord.country || filterObjects["country"] == "") &&
+    // (filterObjects["shape"] == ufoRecord.shape || filterObjects["shape"] == "")
   );
 }
 
@@ -40,11 +40,11 @@ function filterResult() {
 
 d3.select("#filter-btn").on("click", () => {
   filterObjects["datetime"] = d3.select("#datetime").node().value;
-  filterObjects["city"] = d3.select("#city").node().value;
-  filterObjects["state"] = d3.select("#state").node().value;
-  filterObjects["country"] = d3.select("#country").node().value;
-  filterObjects["shape"] = d3.select("#shape").node().value;
-  filterData = tableData.filter(executeFilter);
+  // filterObjects["city"] = d3.select("#city").node().value;
+  // filterObjects["state"] = d3.select("#state").node().value;
+  // filterObjects["country"] = d3.select("#country").node().value;
+  // filterObjects["shape"] = d3.select("#shape").node().value;
+  // filterData = tableData.filter(executeFilter);
   filterResult();
 });
 
